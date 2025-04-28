@@ -2,7 +2,7 @@
 import { Button } from '~/components/ui/button';
 import { cn } from '#shared/utils';
 import { ChevronRight } from 'lucide-vue-next';
-import { PaginationNext, type PaginationNextProps } from 'radix-vue';
+import { PaginationNext, type PaginationNextProps } from 'reka-ui';
 import { computed, type HTMLAttributes } from 'vue';
 
 const props = withDefaults(defineProps<PaginationNextProps & { class?: HTMLAttributes['class'] }>(), {

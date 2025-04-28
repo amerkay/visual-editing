@@ -26,6 +26,7 @@ export default defineNuxtConfig({
 		'@nuxt/icon',
 		'@nuxtjs/color-mode',
 		'@nuxtjs/seo',
+		// 'reka-ui/nuxt',
 	],
 
 	css: ['~/assets/css/tailwind.css'],

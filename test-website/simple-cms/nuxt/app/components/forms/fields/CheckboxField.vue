@@ -17,7 +17,7 @@ const localValue = computed({
 
 <template>
 	<div class="flex items-center gap-x-2">
-		<Checkbox :id="props.name" v-model:checked="localValue" />
+		<Checkbox :id="props.name" v-model="localValue" />
 		<Label :for="props.name" class="text-sm">{{ props.label }}</Label>
 	</div>
 </template>
