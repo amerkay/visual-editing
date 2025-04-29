@@ -9,6 +9,12 @@ export default defineNuxtConfig({
 		{ path: '~/components/shared', pathPrefix: false },
 		{ path: '~/components/base', pathPrefix: false },
 		{ path: '~/components/forms', pathPrefix: false },
+		// Only scan .vue files here (skip .ts) to avoid `Two
+		// component files resolving to the same name` warnings
+		{
+			path: '~/components/ui',
+			extensions: ['.vue'],
+		},
 	],
 
 	ssr: true,
@@ -22,7 +28,6 @@ export default defineNuxtConfig({
 		'@vueuse/nuxt',
 		'nuxt-security',
 		'@nuxtjs/tailwindcss',
-		'shadcn-nuxt',
 		'@nuxt/icon',
 		'@nuxtjs/color-mode',
 		'@nuxtjs/seo',
@@ -38,18 +43,6 @@ export default defineNuxtConfig({
 			dontDoThisInProductionToken: import.meta.env.DIRECTUS_SERVER_TOKEN,
 		},
 		directusServerToken: import.meta.env.DIRECTUS_SERVER_TOKEN,
-	},
-
-	shadcn: {
-		/**
-		 * Prefix for all the imported component
-		 */
-		prefix: '',
-		/**
-		 * Directory that the component lives in.
-		 * @default "./components/ui"
-		 */
-		componentDir: './app/components/ui',
 	},
 
 	security: {
